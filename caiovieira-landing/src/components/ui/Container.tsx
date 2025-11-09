@@ -7,7 +7,7 @@ export function Container({
 }) {
   return (
     <div className="w-full px-auto flex flex-col justify-center min-h-screen">
-      {children}
+      <div className="px-2">{children}</div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Code2, Github, Linkedin, Mail } from "lucide-react";
+import { Icon } from "./ui/Icons";
 
 export function Hero() {
   {
@@ -10,7 +10,7 @@ export function Hero() {
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-block mb-6 animate-float">
           <div className="w-24 h-24 rounded-full bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-            <Code2 className="w-12 h-12" />
+            <Icon icon="code" className="w-12 h-12" />
           </div>
         </div>
 
@@ -34,23 +34,23 @@ export function Hero() {
             href="https://github.com/caiovieira-dev"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors duration-300 hover:scale-110 transform"
+            className="p-3 text-text-link hover:text-hover-text-link rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors duration-300 hover:scale-110 transform"
           >
-            <Github className="w-6 h-6" />
+            <Icon icon="github" className="w-6 h-6" />
           </a>
           <a
             href="https://linkedin.com/in/caio-vieira-b1aab9201"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors duration-300 hover:scale-110 transform"
+            className="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-text-link hover:text-hover-text-link transition-colors duration-300 hover:scale-110 transform"
           >
-            <Linkedin className="w-6 h-6" />
+            <Icon icon="linkedin" className="w-6 h-6" />
           </a>
           <a
             href="mailto:caiocesarav0208@gmail.com"
-            className="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors duration-300 hover:scale-110 transform"
+            className="p-3 rounded-lg bg-slate-800 text-text-link hover:text-hover-text-link hover:bg-slate-700 transition-colors duration-300 hover:scale-110 transform"
           >
-            <Mail className="w-6 h-6" />
+            <Icon icon="mail" className="w-6 h-6" />
           </a>
         </div>
       </div>
