@@ -1,14 +1,8 @@
 [phases.install]
-cmds = [
-  "cd caiovieira-landing",
-  "pnpm install --frozen-lockfile"
-]
+cmds = ["pnpm install --frozen-lockfile"]
 
-[phases.build]
-cmds = [
-  "cd caiovieira-landing",
-  "pnpm run build"
-]
+[phases.build]  
+cmds = ["pnpm run build"]
 
 [start]
-cmd = "cd caiovieira-landing/dist && caddy file-server --listen :80"
+cmd = "caddy file-server --root dist --listen :80"
