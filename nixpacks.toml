@@ -1,0 +1,17 @@
+[phases.setup]
+nixPkgs = ["nodejs_22", "pnpm-9_x"]
+
+[phases.install]
+cmds = [
+  "cd caiovieira-landing",
+  "pnpm install --frozen-lockfile"
+]
+
+[phases.build]
+cmds = [
+  "cd caiovieira-landing",
+  "pnpm run build"
+]
+
+[start]
+cmd = "cd caiovieira-landing/dist && caddy file-server --listen :80"
