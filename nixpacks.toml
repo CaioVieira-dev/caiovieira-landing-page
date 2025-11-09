@@ -1,5 +1,6 @@
 [phases.setup]
-nixPkgs = ["nodejs_22", "pnpm_9"]
+nixPkgs = ["nodejs", "pnpm"]
+nixpkgsArchive = "ba913eda2df8eb72147259189d55932012df6301"
 
 [phases.install]
 cmds = [
@@ -15,3 +16,6 @@ cmds = [
 
 [start]
 cmd = "cd caiovieira-landing/dist && caddy file-server --listen :80"
+
+[variables]
+NODE_VERSION = "22"
