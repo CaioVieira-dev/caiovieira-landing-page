@@ -6,13 +6,13 @@ WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
 # Copie apenas arquivos de dependências primeiro (cache layer)
-COPY caiovieira-landing/package.json caiovieira-landing/pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml ./
 
 # Instale dependências
 RUN pnpm install --frozen-lockfile
 
 # Copie o resto dos arquivos do projeto
-COPY caiovieira-landing/ ./
+COPY . ./
 
 # Build da aplicação
 RUN pnpm run build
