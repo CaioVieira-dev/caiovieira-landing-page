@@ -23,8 +23,8 @@ FROM caddy:2-alpine
 # Copie o build do stage anterior
 COPY --from=builder /app/dist /usr/share/caddy
 
-# Crie Caddyfile
-RUN echo ':80 { root * /usr/share/caddy; file_server; try_files {path} /index.html; }' > /etc/caddy/Caddyfile
+# Crie Caddyfile com sintaxe correta
+RUN printf ':80 {\n  root * /usr/share/caddy\n  file_server\n  try_files {path} /index.html\n}\n' > /etc/caddy/Caddyfile
 
 EXPOSE 80
 
